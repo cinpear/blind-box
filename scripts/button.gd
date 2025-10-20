@@ -37,5 +37,5 @@ func _on_pressed() -> void:
 				countTen -= 10
 			_update_label2()
 			
-			if (click_count == 3):
+			if (click_count == 3000):
 				get_node("../Panel").visible = true
