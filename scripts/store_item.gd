@@ -2,7 +2,6 @@ extends PanelContainer
 
 @onready var main = get_node("../Button")
 @onready var cost_label = $"HBoxContainer/Label2"
-var cost = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,14 +9,14 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _update_cost_label():
-	cost_label.text = "Cost: " + str(cost)
-
+	cost_label.text = "Cost: " + str(Global.cost1)
+	
 func _on_button_pressed() -> void:
-	if main.click_count >= cost && main.chance < 10:
-		main.click_count -= cost
-		cost += 1
+	if Global.click_count >= Global.cost1 && Global.chance < 10:
+		Global.click_count -= Global.cost1
+		Global.cost1 += 1
 		_update_cost_label()
-		main.chance += 1
+		Global.chance += 1
 		main._update_label()
 		main._update_label2()
 		

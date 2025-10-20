@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsoumk8kijd3"]
+[gd_scene load_steps=5 format=3 uid="uid://bp2l63cswr1df"]
 
-[ext_resource type="Script" path="res://scripts/button.gd" id="1_gtp3m"]
-[ext_resource type="PackedScene" uid="uid://xak3sobj22c3" path="res://scenes/store_item.tscn" id="2_idpqc"]
-[ext_resource type="PackedScene" uid="uid://by0bt0hhngceh" path="res://scenes/store_item2.tscn" id="2_yfsvm"]
-[ext_resource type="Script" path="res://scripts/button_2.gd" id="4_ogy4p"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_booqe"]
+[ext_resource type="PackedScene" uid="uid://xak3sobj22c3" path="res://scenes/store_item.tscn" id="2_quafb"]
+[ext_resource type="PackedScene" uid="uid://by0bt0hhngceh" path="res://scenes/store_item2.tscn" id="3_qxx44"]
+[ext_resource type="Script" path="res://scripts/button_2.gd" id="4_meppo"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -24,7 +24,7 @@ offset_right = 1173.32
 offset_bottom = 628.44
 theme_override_font_sizes/font_size = 50
 text = "Click Me!"
-script = ExtResource("1_gtp3m")
+script = ExtResource("1_booqe")
 
 [node name="Panel" type="Panel" parent="Button"]
 layout_mode = 0
@@ -77,20 +77,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Control" type="Control" parent="Panel"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="storeItem" parent="." instance=ExtResource("2_idpqc")]
+[node name="storeItem" parent="." instance=ExtResource("2_quafb")]
 layout_mode = 1
 offset_left = 88.0
 offset_top = 843.0
 offset_right = -1300.0
 offset_bottom = -69.0
 
-[node name="storeItem2" parent="." instance=ExtResource("2_yfsvm")]
+[node name="storeItem2" parent="." instance=ExtResource("3_qxx44")]
 layout_mode = 1
 offset_left = 691.0
 offset_top = 831.0
@@ -105,7 +99,7 @@ offset_right = 1838.0
 offset_bottom = 173.0
 theme_override_font_sizes/font_size = 30
 text = "Return Home"
-script = ExtResource("4_ogy4p")
+script = ExtResource("4_meppo")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
