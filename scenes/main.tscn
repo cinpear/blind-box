@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsoumk8kijd3"]
+
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_gtp3m"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.004
+anchor_bottom = 0.007
+offset_left = 761.0
+offset_top = 376.0
+offset_right = 1173.32
+offset_bottom = 628.44
+script = ExtResource("1_gtp3m")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 101.0
+offset_right = 263.0
+offset_bottom = 153.0
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
