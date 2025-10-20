@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://xak3sobj22c3"]
+
+[ext_resource type="Script" path="res://scripts/store_item.gd" id="1_s0e08"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iucl0"]
+bg_color = Color(0.300342, 0.652542, 0.763321, 1)
+
+[node name="storeItem" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1434.0
+offset_bottom = -881.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iucl0")
+script = ExtResource("1_s0e08")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "+10% chance"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Buy"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]

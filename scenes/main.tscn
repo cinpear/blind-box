@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsoumk8kijd3"]
+[gd_scene load_steps=3 format=3 uid="uid://bsoumk8kijd3"]
 
 [ext_resource type="Script" path="res://scripts/button.gd" id="1_gtp3m"]
+[ext_resource type="PackedScene" uid="uid://xak3sobj22c3" path="res://scenes/store_item.tscn" id="2_idpqc"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -19,21 +20,24 @@ offset_left = 761.0
 offset_top = 376.0
 offset_right = 1173.32
 offset_bottom = 628.44
+theme_override_font_sizes/font_size = 50
+text = "Click Me!"
 script = ExtResource("1_gtp3m")
-
-[node name="Label" type="Label" parent="Button"]
-layout_mode = 0
-offset_left = 159.0
-offset_top = 101.0
-offset_right = 263.0
-offset_bottom = 153.0
 
 [node name="Panel" type="Panel" parent="Button"]
 layout_mode = 0
 offset_left = -726.0
 offset_top = -350.0
-offset_right = -475.0
+offset_right = 54.0
 offset_bottom = -256.0
+
+[node name="Label" type="Label" parent="Button/Panel"]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 24.0
+offset_right = 733.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 20
 
 [node name="Label2" type="Label" parent="Button/Panel"]
 layout_mode = 0
@@ -41,5 +45,13 @@ offset_left = 24.0
 offset_top = 25.0
 offset_right = 235.0
 offset_bottom = 68.0
+theme_override_font_sizes/font_size = 20
+
+[node name="storeItem" parent="." instance=ExtResource("2_idpqc")]
+layout_mode = 1
+offset_left = 88.0
+offset_top = 843.0
+offset_right = -1300.0
+offset_bottom = -69.0
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
