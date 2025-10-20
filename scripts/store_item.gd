@@ -1,7 +1,6 @@
 extends PanelContainer
 
-@onready var main = get_node("../Button")
-@onready var cost_label = $"HBoxContainer/Label2"
+@onready var cost_label = $"HBoxContainer/Label2" 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,6 +16,4 @@ func _on_button_pressed() -> void:
 		Global.cost1 += 1
 		_update_cost_label()
 		Global.chance += 1
-		main._update_label()
-		main._update_label2()
 		

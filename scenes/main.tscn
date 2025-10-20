@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsoumk8kijd3"]
+[gd_scene load_steps=4 format=3 uid="uid://bsoumk8kijd3"]
 
 [ext_resource type="Script" path="res://scripts/button.gd" id="1_gtp3m"]
-[ext_resource type="PackedScene" uid="uid://xak3sobj22c3" path="res://scenes/store_item.tscn" id="2_idpqc"]
-[ext_resource type="PackedScene" uid="uid://by0bt0hhngceh" path="res://scenes/store_item2.tscn" id="2_yfsvm"]
 [ext_resource type="Script" path="res://scripts/button_2.gd" id="4_ogy4p"]
+[ext_resource type="Script" path="res://scripts/store_button.gd" id="4_x4m5e"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -83,29 +82,28 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="storeItem" parent="." instance=ExtResource("2_idpqc")]
-layout_mode = 1
-offset_left = 88.0
-offset_top = 843.0
-offset_right = -1300.0
-offset_bottom = -69.0
-
-[node name="storeItem2" parent="." instance=ExtResource("2_yfsvm")]
-layout_mode = 1
-offset_left = 691.0
-offset_top = 831.0
-offset_right = -705.0
-offset_bottom = -69.0
-
-[node name="Button2" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1557.0
-offset_top = 60.0
-offset_right = 1838.0
-offset_bottom = 173.0
+offset_left = 1458.0
+offset_top = 814.0
+offset_right = 1877.0
+offset_bottom = 1029.0
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Shop"
+script = ExtResource("4_x4m5e")
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Return Home"
 script = ExtResource("4_ogy4p")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_pressed"]
