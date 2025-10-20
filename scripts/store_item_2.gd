@@ -7,9 +7,8 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_button_pressed() -> void:
-	if main.click_count >= 10 && main.chance < 10:
-		main.click_count -= 10
-		main.chance += 1
+	if main.click_count >= 30:
+		main.times += 1
+		main._update_label3()
+		main.click_count -= 30
 		main._update_label()
-		main._update_label2()
-		

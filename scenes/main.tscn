@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsoumk8kijd3"]
+[gd_scene load_steps=4 format=3 uid="uid://bsoumk8kijd3"]
 
 [ext_resource type="Script" path="res://scripts/button.gd" id="1_gtp3m"]
 [ext_resource type="PackedScene" uid="uid://xak3sobj22c3" path="res://scenes/store_item.tscn" id="2_idpqc"]
+[ext_resource type="PackedScene" uid="uid://by0bt0hhngceh" path="res://scenes/store_item2.tscn" id="2_yfsvm"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -29,7 +30,7 @@ layout_mode = 0
 offset_left = -726.0
 offset_top = -350.0
 offset_right = 54.0
-offset_bottom = -256.0
+offset_bottom = -103.0
 
 [node name="Label" type="Label" parent="Button/Panel"]
 layout_mode = 0
@@ -47,11 +48,46 @@ offset_right = 235.0
 offset_bottom = 68.0
 theme_override_font_sizes/font_size = 20
 
+[node name="Label3" type="Label" parent="Button/Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 179.0
+offset_right = 307.0
+offset_bottom = 217.0
+theme_override_font_sizes/font_size = 20
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1266.0
+offset_top = 83.0
+offset_right = 1731.0
+offset_bottom = 303.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 37.0
+offset_right = 413.0
+offset_bottom = 177.0
+theme_override_font_sizes/font_size = 40
+text = "You win now stop please"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="storeItem" parent="." instance=ExtResource("2_idpqc")]
 layout_mode = 1
 offset_left = 88.0
 offset_top = 843.0
 offset_right = -1300.0
+offset_bottom = -69.0
+
+[node name="storeItem2" parent="." instance=ExtResource("2_yfsvm")]
+layout_mode = 1
+offset_left = 691.0
+offset_top = 831.0
+offset_right = -705.0
 offset_bottom = -69.0
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
