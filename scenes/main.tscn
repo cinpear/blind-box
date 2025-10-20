@@ -28,4 +28,18 @@ offset_top = 101.0
 offset_right = 263.0
 offset_bottom = 153.0
 
+[node name="Panel" type="Panel" parent="Button"]
+layout_mode = 0
+offset_left = -726.0
+offset_top = -350.0
+offset_right = -475.0
+offset_bottom = -256.0
+
+[node name="Label2" type="Label" parent="Button/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 25.0
+offset_right = 235.0
+offset_bottom = 68.0
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
