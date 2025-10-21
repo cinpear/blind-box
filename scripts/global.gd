@@ -6,6 +6,8 @@ var times = 1
 var click_count = 0
 var cost1 = 1
 var cost2 = 30
+var gachacost = 1
+var total_clicks = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
