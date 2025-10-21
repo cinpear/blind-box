@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://1qk3sgjbj0ng"]
+[gd_scene load_steps=3 format=3 uid="uid://1qk3sgjbj0ng"]
 
 [ext_resource type="Script" path="res://scripts/gacha_item.gd" id="1_yotto"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htcp3"]
+bg_color = Color(0.301961, 0.65098, 0.764706, 1)
 
 [node name="gachaItem" type="PanelContainer"]
 anchors_preset = 15
@@ -10,6 +13,7 @@ offset_right = -1291.0
 offset_bottom = -810.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_htcp3")
 script = ExtResource("1_yotto")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]

@@ -1,9 +1,9 @@
 extends Button
 
-@onready var count_label = $"../Panel2/Label"
-@onready var chance_label = $"../Panel2/Label2"
-@onready var times_label = $"../Panel2/Label3"
-@onready var total_label = $"../Panel2/Label4"
+@onready var count_label = $"../Panel2/VBoxContainer/HBoxContainer2/Label"
+@onready var chance_label = $"../Panel2/VBoxContainer/HBoxContainer2/Label2"
+@onready var times_label = $"../Panel2/VBoxContainer/HBoxContainer/Label3"
+@onready var total_label = $"../Panel2/VBoxContainer/HBoxContainer/Label4"
 
 var rng = RandomNumberGenerator.new()
 
