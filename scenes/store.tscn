@@ -16,20 +16,18 @@ grow_vertical = 2
 script = ExtResource("1_2w7nd")
 
 [node name="storeItem" parent="." instance=ExtResource("1_stepm")]
-visible = false
 layout_mode = 1
-offset_left = 241.0
-offset_top = 384.0
-offset_right = -1193.0
-offset_bottom = -497.0
+offset_left = 123.0
+offset_top = 751.0
+offset_right = -1311.0
+offset_bottom = -130.0
 
 [node name="storeItem2" parent="." instance=ExtResource("2_jlowk")]
-visible = false
 layout_mode = 1
-offset_left = 991.0
-offset_top = 388.0
-offset_right = -443.0
-offset_bottom = -493.0
+offset_left = 663.0
+offset_top = 752.0
+offset_right = -771.0
+offset_bottom = -129.0
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

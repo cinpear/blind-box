@@ -23,7 +23,7 @@ theme_override_constants/separation = 50
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "+10% chance"
+text = "+5% chance"
 horizontal_alignment = 1
 vertical_alignment = 1
 

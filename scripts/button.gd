@@ -18,7 +18,7 @@ func _update_label():
 	count_label.text = "Clicks: " + str(Global.click_count) + "\n"
 
 func _update_label2():
-	chance_label.text = "Chance: " + str(Global.chance * 10) + "%"
+	chance_label.text = "Chance: " + str(Global.chance) + "%"
 	
 func _update_label3():
 	times_label.text = "Times/Click: " + str(Global.times)
@@ -33,7 +33,7 @@ func _move_button():
 	
 func _on_pressed() -> void:
 	for a in range(Global.times):
-		var random_num = rng.randi_range(0, 9)
+		var random_num = rng.randi_range(1, 100)
 		if (random_num < Global.chance):
 			Global.click_count += 1
 			Global.total_clicks += 1
@@ -41,11 +41,11 @@ func _on_pressed() -> void:
 			_update_label()
 			_update_label4()
 			while (Global.countTen >= 10):
-				if (Global.chance < 10):
+				if (Global.chance <= 100):
 					Global.chance += 1
 				Global.countTen -= 10
 			_update_label2()
 			
-			if (Global.click_count == 3000):
+			if (Global.click_count == 5000):
 				get_node("../Panel").visible = true
 	_move_button()

@@ -17,10 +17,10 @@ func _on_button_pressed() -> void:
 		_update_cost_label()
 		var randomNum = rng.randi_range(0, 2)
 		if (randomNum == 0):
-			Global.chance += 1
-			win_label.text = "Congrats! Chance +10%"
+			Global.chance += 5
+			win_label.text = "Congrats! Chance +5%"
 		elif (randomNum == 1):
-			Global.times += 1
-			win_label.text = "Congrats! Click time +1"
+			Global.times += 2
+			win_label.text = "Congrats! Click time +2"
 		else:
 			win_label.text = "Oof you unlucky"

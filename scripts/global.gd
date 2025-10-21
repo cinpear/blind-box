@@ -1,10 +1,10 @@
 extends Node
 
-var chance = 1
+var chance = 10
 var countTen = 0
 var times = 1
 var click_count = 0
-var cost1 = 1
+var cost1 = 10
 var cost2 = 30
 var gachacost = 1
 var total_clicks = 0

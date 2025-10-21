@@ -11,9 +11,9 @@ func _update_cost_label():
 	cost_label.text = "Cost: " + str(Global.cost1)
 	
 func _on_button_pressed() -> void:
-	if Global.click_count >= Global.cost1 && Global.chance < 10:
+	if Global.click_count >= Global.cost1 && Global.chance < 100:
 		Global.click_count -= Global.cost1
 		Global.cost1 += 1
 		_update_cost_label()
-		Global.chance += 1
+		Global.chance += 5
 		
