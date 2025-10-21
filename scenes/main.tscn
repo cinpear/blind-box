@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsoumk8kijd3"]
+[gd_scene load_steps=5 format=3 uid="uid://bsoumk8kijd3"]
 
 [ext_resource type="Script" path="res://scripts/button.gd" id="1_gtp3m"]
+[ext_resource type="Script" path="res://scripts/panel.gd" id="2_xfysl"]
 [ext_resource type="Script" path="res://scripts/button_2.gd" id="4_ogy4p"]
 [ext_resource type="Script" path="res://scripts/store_button.gd" id="4_x4m5e"]
 
@@ -86,6 +87,8 @@ offset_left = 1266.0
 offset_top = 83.0
 offset_right = 1731.0
 offset_bottom = 303.0
+scale = Vector2(0.952, 0.952)
+script = ExtResource("2_xfysl")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
@@ -98,6 +101,15 @@ text = "You win now stop please"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 139.0
+offset_right = 155.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 20
+text = "End Game"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -122,5 +134,6 @@ text = "Return Home"
 script = ExtResource("4_ogy4p")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_pressed"]

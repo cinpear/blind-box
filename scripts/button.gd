@@ -48,5 +48,8 @@ func _on_pressed() -> void:
 			
 			if (Global.click_count == 5000):
 				get_node("../Panel").visible = true
+		if (Global.click_count == 5000):
+			get_node("../Panel").scale *= 1.10
+				
 	if (Global.moveable):
 		_move_button()
