@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://6mdnyteyhv51"]
+[gd_scene load_steps=7 format=3 uid="uid://6mdnyteyhv51"]
 
 [ext_resource type="Script" path="res://scripts/store.gd" id="1_2w7nd"]
 [ext_resource type="PackedScene" uid="uid://xak3sobj22c3" path="res://scenes/store_item.tscn" id="1_stepm"]
 [ext_resource type="PackedScene" uid="uid://by0bt0hhngceh" path="res://scenes/store_item2.tscn" id="2_jlowk"]
 [ext_resource type="PackedScene" uid="uid://pby0jxnw58te" path="res://scenes/click_panel.tscn" id="4_gaf1i"]
 [ext_resource type="PackedScene" uid="uid://1qk3sgjbj0ng" path="res://scenes/gacha_item.tscn" id="5_wndvc"]
+[ext_resource type="PackedScene" uid="uid://cgl08i6kl0taj" path="res://scenes/store_item3.tscn" id="6_2s0sv"]
 
 [node name="store" type="Control"]
 layout_mode = 3
@@ -28,6 +29,13 @@ offset_left = 663.0
 offset_top = 752.0
 offset_right = -771.0
 offset_bottom = -129.0
+
+[node name="storeItem3" parent="." instance=ExtResource("6_2s0sv")]
+layout_mode = 1
+offset_left = 1297.0
+offset_top = 551.0
+offset_right = -137.0
+offset_bottom = -330.0
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

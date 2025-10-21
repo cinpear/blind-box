@@ -48,4 +48,5 @@ func _on_pressed() -> void:
 			
 			if (Global.click_count == 5000):
 				get_node("../Panel").visible = true
-	_move_button()
+	if (Global.moveable):
+		_move_button()
