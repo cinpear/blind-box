@@ -1,9 +1,9 @@
 extends Button
 
-@onready var count_label = $"Panel/Label"
-@onready var chance_label = $"Panel/Label2"
-@onready var times_label = $"Panel/Label3"
-@onready var total_label = $"Panel/Label4"
+@onready var count_label = $"../Panel2/Label"
+@onready var chance_label = $"../Panel2/Label2"
+@onready var times_label = $"../Panel2/Label3"
+@onready var total_label = $"../Panel2/Label4"
 
 var rng = RandomNumberGenerator.new()
 
@@ -27,8 +27,9 @@ func _update_label4():
 	total_label.text = "Lifetime Clicks: " + str(Global.total_clicks)
 	
 func _move_button():
-	$".".x = 400
-	$".".y = 500
+	var x = rng.randi_range(100, 1000)
+	var y = rng.randi_range(100, 700)
+	self.position = Vector2(x, y)
 	
 func _on_pressed() -> void:
 	for a in range(Global.times):

@@ -26,14 +26,19 @@ theme_override_font_sizes/font_size = 50
 text = "Click Me!"
 script = ExtResource("1_gtp3m")
 
-[node name="Panel" type="Panel" parent="Button"]
-layout_mode = 0
-offset_left = -726.0
-offset_top = -350.0
-offset_right = 54.0
-offset_bottom = -103.0
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.8
+anchor_top = -0.871
+anchor_right = -0.8
+anchor_bottom = -0.871
+offset_left = 1571.0
+offset_top = 966.68
+offset_right = 2351.0
+offset_bottom = 1213.68
 
-[node name="Label" type="Label" parent="Button/Panel"]
+[node name="Label" type="Label" parent="Panel2"]
 layout_mode = 0
 offset_left = 447.0
 offset_top = 24.0
@@ -41,7 +46,7 @@ offset_right = 733.0
 offset_bottom = 68.0
 theme_override_font_sizes/font_size = 20
 
-[node name="Label2" type="Label" parent="Button/Panel"]
+[node name="Label2" type="Label" parent="Panel2"]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 25.0
@@ -49,7 +54,7 @@ offset_right = 235.0
 offset_bottom = 68.0
 theme_override_font_sizes/font_size = 20
 
-[node name="Label3" type="Label" parent="Button/Panel"]
+[node name="Label3" type="Label" parent="Panel2"]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 179.0
@@ -57,7 +62,7 @@ offset_right = 307.0
 offset_bottom = 217.0
 theme_override_font_sizes/font_size = 20
 
-[node name="Label4" type="Label" parent="Button/Panel"]
+[node name="Label4" type="Label" parent="Panel2"]
 layout_mode = 0
 offset_left = 413.0
 offset_top = 167.0
